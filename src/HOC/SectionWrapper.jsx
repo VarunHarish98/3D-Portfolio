@@ -11,8 +11,9 @@ const SectionWrapper = (Component, id) => {
         initial="hidden"
         whileInView="show"
         className={`${styles.padding} max-w-7xl z-0 relative`}
-        viewport={{once: true, amount: 0.25}}
+        viewport={{ once: true, amount: 0.25 }}
       >
+        <span className="hash-span" id={id}>&nbsp;</span>
         <Component />
       </motion.section>
     );

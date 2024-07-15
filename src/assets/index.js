@@ -25,6 +25,8 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import accenture from "./company/accenture.png"
+import vi_solutions from "./company/vi_solutions.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -56,6 +58,8 @@ export {
   shopify,
   starbucks,
   tesla,
+  accenture,
+  vi_solutions,
   carrent,
   jobit,
   tripguide,
