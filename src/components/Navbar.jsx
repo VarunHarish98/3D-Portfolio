@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center bg-primary top-0 z-20 py-5`}
+      className={`${styles.paddingX} w-full flex items-center bg-primary top-0 z-20`}
     >
       <div className="flex justify-between items-center max-w-8xl w-full mx-auto">
         <Link
@@ -21,8 +21,8 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-24 h-24 object-contain" />
-          <p className="text-white font-bold text-[18px] cursor-pointer ">
-            {firstName}{" "}
+          <p className="text-white font-bold text-[18px] flex cursor-pointer ">
+            {firstName} &nbsp;
             <span className="sm:block hidden">
               {middleName} {lastName}
             </span>
@@ -42,21 +42,34 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          {toggle ? (
-            <img
-              src={close}
-              alt="menu"
-              className="w-[18px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-          ) : (
-            <img
-              src={menu}
-              alt="menu"
-              className="w-[18px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
+          <img
+            src={!toggle ? menu : close}
+            alt="menu"
+            className="w-[18px] h-[18px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
+        </div>
+        <div
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } absolute right-0 text-white mx-4 my-2 z-10 top-20 black-gradient px-8 rounded-xl p-4 text-[14px]`}
+        >
+          <ul className="gap-4 flex flex-col justify-end items-start">
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[14px]`}
+                onClick={() => {
+                  setActive(link.title);
+                  setToggle(!toggle);
+                }}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>
