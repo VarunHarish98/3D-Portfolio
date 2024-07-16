@@ -7,8 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../HOC/SectionWrapper";
 const ServiceCard = ({ title, icon, index }) => {
   return (
-    // <p>{title}</p>
-    <Tilt>
+    <Tilt className="sm:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient rounded-[20px] shadow-card"
@@ -43,7 +42,7 @@ const About = () => {
         technologies including MongoDB, Cassandra, Redis, Elastic Logstash
         Kibana, Docker and Kubernetes.
       </motion.p>
-      <div className="flex flex-wrap gap-10 mt-20">
+      <div className="flex flex-wrap gap-10 mt-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

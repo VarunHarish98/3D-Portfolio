@@ -8,7 +8,7 @@ const Hero = () => {
     // Background
     <section className="relative h-screen w-full mx-auto">
       <div
-        className={`${styles.paddingX} flex flex-row inset-0 gap-5 mx-auto items-start absolute top-[30px]`}
+        className={`${styles.paddingX} flex flex-row inset-0 gap-5 mx-auto items-start max-w-7xl absolute`}
       >
         <div className="flex flex-col mt-5 justify-center items-center">
           <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
@@ -19,13 +19,12 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Varun</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-            I develop 3D visuals user <br className="sm:block hidden" />{" "}
-            interfaces and web applications.
+            I develop web applications.
           </p>
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute flex justify-center bottom-32 xs:bottom-10 items-center w-full">
+      <div className="absolute flex justify-center bottom-32 items-center w-full">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start border-secondary p-2">
             <motion.div

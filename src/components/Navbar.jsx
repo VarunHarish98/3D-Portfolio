@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center bg-primary top-0 z-20`}
     >
-      <div className="flex justify-between items-center max-w-8xl w-full mx-auto">
+      <div className="flex z-10 justify-between items-center max-w-7xl w-full mx-auto">
         <Link
           to={"/"}
           className="flex gap-0 sm:gap-2 items-center"
