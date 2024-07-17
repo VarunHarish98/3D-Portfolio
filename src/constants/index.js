@@ -161,16 +161,17 @@ const education = [
 
 const experiences = [
   {
-    title: "Full Stack Developer",
+    title: "Assocaite Software Engineer",
     company_name: "Accenture",
     icon: accenture,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "December 2020 - August 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web based chatbot application using React.js, NodeJs and other related technologies.",
+      "Integrating payment functionality inside chatbot application generating over $50,000 monthly.",
+      "Designing and developing REST-API using Node.js managing over 150,000 user daily.",
+      "Creating a log monitor dashboard using ELastic Logstash Kibana across 5 microservices.",
+      "Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.",
     ],
   },
   {
@@ -178,12 +179,10 @@ const experiences = [
     company_name: "VI Solutions",
     icon: vi_solutions,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "June 2019 - July 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designing and implementing LabVIEW application using ARM-based assembly language to function as antivirus",
+      "Engineering LabVIEW for hardware, increasing data acquisition efficiency enriching capabilities for NI-DAQ and NI-RIO devices.",
     ],
   },
 ];
@@ -237,6 +236,7 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/VarunHarish98/NetflixGPT",
     live_link: "https://netflix-gpt-ten-navy.vercel.app/",
+    hasLink: true,
   },
   {
     name: "Job IT",
@@ -257,8 +257,9 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/VarunHarish98/AI-Shirt-Threejs",
     live_link: "",
+    hasLink: false,
   },
   {
     name: "Bill Automator",
@@ -281,6 +282,7 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/VarunHarish98/Bill-Data",
     live_link: "https://pdf-bill.tiiny.site/",
+    hasLink: false,
   },
 ];
 
