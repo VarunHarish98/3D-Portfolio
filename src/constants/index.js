@@ -27,6 +27,8 @@ import {
   vi_solutions,
   sbu,
   rnsit,
+  java,
+  kubernetes,
 } from "../assets";
 
 export const firstName = "Varun";
@@ -51,7 +53,8 @@ export const navLinks = [
   },
 ];
 
-export const filePath = "VarunHHResume.pdf";
+export const filePath =
+  "https://drive.google.com/file/d/1CHhChFL406M6IeugDdo9oh8my1oSwAZv/view?usp=sharing";
 const services = [
   {
     title: "Web Developer",
@@ -85,6 +88,10 @@ const technologies = [
     icon: typescript,
   },
   {
+    name: "Java",
+    icon: java,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
@@ -113,12 +120,12 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "kubernetes",
+    icon: kubernetes,
   },
 ];
 
@@ -210,25 +217,26 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Flix-GPT",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search movies through queries using OpenAI (Chat-GPT), providing a convenient and efficient solution for movie recommendation.",
     tags: [
       {
-        name: "react",
+        name: "reactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "tailwindCSS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "openAi",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/VarunHarish98/NetflixGPT",
+    live_link: "https://netflix-gpt-ten-navy.vercel.app/",
   },
   {
     name: "Job IT",
@@ -250,27 +258,29 @@ const projects = [
     ],
     image: jobit,
     source_code_link: "https://github.com/",
+    live_link: "",
   },
   {
-    name: "Trip Guide",
+    name: "Bill Automator",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "node",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/VarunHarish98/Bill-Data",
+    live_link: "https://pdf-bill.tiiny.site/",
   },
 ];
 

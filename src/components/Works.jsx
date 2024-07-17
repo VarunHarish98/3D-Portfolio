@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -28,10 +29,10 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full rounded-2xl object-cover"
           />
-          <div className="absolute inset-0 flex flex-row-reverse justify-between m-3 gap-2">
+          <div className="absolute inset-0 flex flex-row justify-between m-3 gap-2">
             <div
               className="rounded-full w-8 h-8 flex cursor-pointer"
-              onClick={() => window.open(source_code_link, "blank")}
+              onClick={() => window.open(live_link, "blank")}
             >
               <img src={links} alt="github_link" className="object-contain" />
             </div>
