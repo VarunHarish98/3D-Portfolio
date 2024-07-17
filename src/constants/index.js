@@ -51,7 +51,7 @@ export const navLinks = [
   },
 ];
 
-export const filePath = "src/assets/VarunHHResume.pdf";
+export const filePath = "VarunHHResume.pdf";
 const services = [
   {
     title: "Web Developer",
