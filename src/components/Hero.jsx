@@ -8,7 +8,7 @@ const Hero = () => {
     // Background
     <section className="relative h-screen w-full mx-auto">
       <div
-        className={`${styles.paddingX} flex flex-row inset-0 gap-5 mx-auto items-start max-w-7xl absolute`}
+        className={`${styles.paddingX} flex flex-row inset-0 gap-5 mx-auto items-start max-w-7xl absolute my-24`}
       >
         <div className="flex flex-col mt-5 justify-center items-center">
           <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute flex justify-center bottom-32 items-center w-full">
+      <div className="absolute flex justify-center bottom-[38px] items-center w-full">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start border-secondary p-2">
             <motion.div

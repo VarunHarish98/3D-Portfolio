@@ -25,7 +25,7 @@ const ComputerCanvas = () => {
     <Canvas
       frameLoop="demand"
       shadows
-      className="-top-20"
+      // className="-top-10"
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
