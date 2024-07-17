@@ -2,7 +2,7 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { github, creator } from "../assets";
+import { github, creator, links } from "../assets";
 import SectionWrapper from "../HOC/SectionWrapper";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -28,18 +28,18 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full rounded-2xl object-cover"
           />
-          <div className="absolute inset-0 flex justify-end m-3 gap-2">
+          <div className="absolute inset-0 flex flex-row-reverse justify-between m-3 gap-2">
             <div
-              className="rounded-full w-8 h-8 bg-black flex cursor-pointer"
+              className="rounded-full w-8 h-8 flex cursor-pointer"
               onClick={() => window.open(source_code_link, "blank")}
             >
-              <img src={github} alt="github_link" className="object-contain" />
+              <img src={links} alt="github_link" className="object-contain" />
             </div>
             <div
               className="rounded-full w-8 h-8 bg-black flex cursor-pointer"
               onClick={() => window.open(source_code_link, "blank")}
             >
-              <img src={creator} alt="github_link" className="object-contain" />
+              <img src={github} alt="github_link" className="object-contain" />
             </div>
           </div>
         </div>

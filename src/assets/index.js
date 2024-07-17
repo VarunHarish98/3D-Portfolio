@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import links from "./link.png"
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -27,6 +28,9 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import accenture from "./company/accenture.png"
 import vi_solutions from "./company/vi_solutions.png"
+
+import rnsit from "./rnsit.png"
+import sbu from "./sbu.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -63,4 +67,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  links,
+  rnsit,
+  sbu
 };

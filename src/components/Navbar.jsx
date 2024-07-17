@@ -1,15 +1,23 @@
 import React, { useState } from "react";
-import { firstName, lastName, middleName, navLinks } from "../constants";
+import {
+  filePath,
+  firstName,
+  lastName,
+  middleName,
+  navLinks,
+} from "../constants";
 import { logo, close, menu } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+
+const viewPDF = (filePath) => window.open(filePath);
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center bg-primary top-0 z-20`}
+      className={`${styles.paddingX} w-full flex absolute items-center bg-primary top-0 z-20`}
     >
       <div className="flex z-10 justify-between items-center max-w-7xl w-full mx-auto">
         <Link
@@ -40,6 +48,12 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <button
+            className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
+            onClick={() => viewPDF(filePath)}
+          >
+            Resume
+          </button>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img

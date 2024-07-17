@@ -24,7 +24,9 @@ import {
   tripguide,
   threejs,
   accenture,
-  vi_solutions
+  vi_solutions,
+  sbu,
+  rnsit,
 } from "../assets";
 
 export const firstName = "Varun";
@@ -36,6 +38,10 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "education",
+    title: "Education",
+  },
+  {
     id: "work",
     title: "Work",
   },
@@ -45,6 +51,7 @@ export const navLinks = [
   },
 ];
 
+export const filePath = "src/assets/VarunHHResume.pdf";
 const services = [
   {
     title: "Web Developer",
@@ -112,6 +119,36 @@ const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+];
+
+const education = [
+  {
+    title: "Master's in Computer Engineering",
+    school: "Stony Brook University",
+    icon: sbu,
+    date: "August 2023 - Present",
+    cgpa: "3.8/4",
+    courses: [
+      "Computer Vision",
+      "Switching & Routing in parallel and distributed systems",
+      "Network Security",
+      "Practical ML and AI",
+      "Data Structures and Algorithms",
+    ],
+  },
+  {
+    title: "Bachelor's in Electronics and Communication Engineering",
+    school: "RNS Institute of Technology",
+    icon: rnsit,
+    date: "August 2016 - July 2020",
+    cgpa: "8.7/10",
+    courses: [
+      "Network Analysis",
+      "Programming in Java",
+      "Machine Learning",
+      "Microprocessor 8086",
+    ],
   },
 ];
 
@@ -237,4 +274,11 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  education,
+  testimonials,
+  projects,
+};

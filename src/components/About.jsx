@@ -42,11 +42,11 @@ const About = () => {
         technologies including MongoDB, Cassandra, Redis, Elastic Logstash
         Kibana, Docker and Kubernetes.
       </motion.p>
-      <div className="flex flex-wrap gap-10 mt-10">
+      {/* <div className="flex flex-wrap gap-10 mt-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
