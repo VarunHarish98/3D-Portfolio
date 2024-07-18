@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
 import { handleAnalyticsEvent } from "../analytics/google-analytics";
+import { useFeatureFlagEnabled } from "posthog-js/react";
 
 const Hero = () => {
+  const render = useFeatureFlagEnabled("render-hero");
+  // console.log(render)
   return (
     // Background
     <section className="relative h-screen w-full mx-auto">
@@ -24,7 +27,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {render && <ComputersCanvas />}
       <div className="absolute flex justify-center bottom-[38px] items-center w-full">
         <a href="#about">
           <div
