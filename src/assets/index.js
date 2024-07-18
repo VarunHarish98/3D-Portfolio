@@ -33,6 +33,8 @@ import tesla from "./company/tesla.png";
 import accenture from "./company/accenture.png";
 import vi_solutions from "./company/vi_solutions.png";
 
+import portfolio from "./portfolio.png";
+
 import rnsit from "./rnsit.png";
 import sbu from "./sbu.png";
 
@@ -78,4 +80,5 @@ export {
   kubernetes,
   links_blk,
   linkedin,
+  portfolio
 };

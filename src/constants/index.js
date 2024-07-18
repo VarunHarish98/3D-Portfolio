@@ -31,6 +31,7 @@ import {
   kubernetes,
   github,
   linkedin,
+  portfolio,
 } from "../assets";
 
 export const firstName = "Varun";
@@ -258,20 +259,44 @@ const projects = [
     isBlack: false,
   },
   {
-    name: "Job IT",
+    name: "Portfolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A 3D portfolio created using react and three.js with awesome 3-D animations showcasing various projects, work experience and education. Used WebGL for graphics rendering through three.js. Integrated google analytics for all button clicks and scroll events.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "three.js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "framer-motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/VarunHarish98/3D-Portfolio",
+    live_link: "https://varun-portfolio-one.vercel.app/",
+    hasLink: true,
+    isBlack: false,
+  },
+  {
+    name: "3-D Shirt Viewer",
+    description:
+      "Web application that enables users to customise shirt, view 3D customised shirt for a better look created using javascript animation library three.js.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-fiber",
         color: "pink-text-gradient",
       },
     ],
@@ -284,7 +309,7 @@ const projects = [
   {
     name: "Bill Automator",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A static and a minimalist website for automating personalised bill generation. Users can download the entered the data in the form of PDF, with all customised billing features.",
     tags: [
       {
         name: "html",
