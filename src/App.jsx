@@ -15,6 +15,7 @@ import {
 import Education from "./components/Education";
 import { useEffect } from "react";
 import { handleAnalyticsPageView } from "./analytics/google-analytics";
+import { Analytics } from "@vercel/analytics/react";
 const App = () => {
   useEffect(() => {
     ReactGA.initialize("G-R1MLZDZ6PS");
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
+        <Analytics />
         <div className="bg-hero-pattern  bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
