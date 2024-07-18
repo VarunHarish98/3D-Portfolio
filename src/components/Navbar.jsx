@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import ReactGA from "react-ga4";
-
 import {
   filePath,
   firstName,
   lastName,
   middleName,
   navLinks,
+  socialLinks,
 } from "../constants";
 import { logo, close, menu } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { handleAnalyticsEvent } from "../analytics/google-analytics";
 
-const viewPDF = (filePath) => window.open(filePath);
+const openLink = (path) => window.open(filePath[path]);
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -58,15 +57,35 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-          <button
-            className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
-            onClick={() => {
-              viewPDF(filePath);
-              handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
-            }}
-          >
-            Resume
-          </button>
+          <div className="flex gap-4">
+            <button
+              className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
+              onClick={() => {
+                openLink("drive");
+                handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
+              }}
+            >
+              Resume
+            </button>
+            <div className="flex gap-2 -mt-1 cursor-pointer ">
+              {socialLinks.map((socialLink) => (
+                <div key={socialLink.id} className="w-8 h-8">
+                  <img
+                    src={`${socialLink.title}`}
+                    onClick={() => {
+                      openLink(socialLink.id);
+                      handleAnalyticsEvent(
+                        socialLink.id,
+                        `${socialLink.id}_url_click`,
+                        socialLink.id
+                      );
+                    }}
+                    alt="socialLink"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img

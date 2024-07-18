@@ -29,6 +29,8 @@ import {
   rnsit,
   java,
   kubernetes,
+  github,
+  linkedin,
 } from "../assets";
 
 export const firstName = "Varun";
@@ -53,8 +55,24 @@ export const navLinks = [
   },
 ];
 
-export const filePath =
-  "https://drive.google.com/file/d/1CHhChFL406M6IeugDdo9oh8my1oSwAZv/view?usp=sharing";
+export const socialLinks = [
+  {
+    id: "github",
+    title: github,
+  },
+  {
+    id: "linkedin",
+    title: linkedin,
+  },
+];
+
+export const filePath = {
+  drive:
+    "https://drive.google.com/file/d/1CHhChFL406M6IeugDdo9oh8my1oSwAZv/view?usp=sharing",
+  linkedin: "https://www.linkedin.com/in/varun-harish1998",
+  github: "https://github.com/VarunHarish98",
+};
+
 const services = [
   {
     title: "Web Developer",
@@ -237,7 +255,7 @@ const projects = [
     source_code_link: "https://github.com/VarunHarish98/NetflixGPT",
     live_link: "https://netflix-gpt-ten-navy.vercel.app/",
     hasLink: true,
-    isBlack: false
+    isBlack: false,
   },
   {
     name: "Job IT",
@@ -261,7 +279,7 @@ const projects = [
     source_code_link: "https://github.com/VarunHarish98/AI-Shirt-Threejs",
     live_link: "",
     hasLink: false,
-    isBlack: false
+    isBlack: false,
   },
   {
     name: "Bill Automator",
@@ -285,7 +303,7 @@ const projects = [
     source_code_link: "https://github.com/VarunHarish98/Bill-Data",
     live_link: "https://pdf-bill.tiiny.site/",
     hasLink: true,
-    isBlack: true
+    isBlack: true,
   },
 ];
 

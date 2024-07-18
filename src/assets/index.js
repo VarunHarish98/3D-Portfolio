@@ -4,10 +4,11 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
-import links from "./link.png"
+import links from "./link.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import links_blk from "./link-blk.png"
+import links_blk from "./link-blk.png";
+import linkedin from "./linkedin.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,11 +30,11 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import accenture from "./company/accenture.png"
-import vi_solutions from "./company/vi_solutions.png"
+import accenture from "./company/accenture.png";
+import vi_solutions from "./company/vi_solutions.png";
 
-import rnsit from "./rnsit.png"
-import sbu from "./sbu.png"
+import rnsit from "./rnsit.png";
+import sbu from "./sbu.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -75,5 +76,6 @@ export {
   sbu,
   java,
   kubernetes,
-  links_blk
+  links_blk,
+  linkedin,
 };
