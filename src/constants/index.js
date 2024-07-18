@@ -237,6 +237,7 @@ const projects = [
     source_code_link: "https://github.com/VarunHarish98/NetflixGPT",
     live_link: "https://netflix-gpt-ten-navy.vercel.app/",
     hasLink: true,
+    isBlack: false
   },
   {
     name: "Job IT",
@@ -260,6 +261,7 @@ const projects = [
     source_code_link: "https://github.com/VarunHarish98/AI-Shirt-Threejs",
     live_link: "",
     hasLink: false,
+    isBlack: false
   },
   {
     name: "Bill Automator",
@@ -282,7 +284,8 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/VarunHarish98/Bill-Data",
     live_link: "https://pdf-bill.tiiny.site/",
-    hasLink: false,
+    hasLink: true,
+    isBlack: true
   },
 ];
 

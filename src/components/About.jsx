@@ -5,6 +5,9 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../HOC/SectionWrapper";
+// import ReactGA from "react-ga4";
+
+//Not being used, as cards are not required for now - TO-DO
 const ServiceCard = ({ title, icon, index }) => {
   return (
     <Tilt className="sm:w-[250px] w-full">
@@ -16,8 +19,10 @@ const ServiceCard = ({ title, icon, index }) => {
           options={{ max: 45, scale: 1, speed: 450 }}
           className="bg-tertiary border-2 flex rounded-[20px] min-h-[280px] justify-evenly items-center flex-col py-5 px-24"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain"/>
-          <h3 className="font-bold text-white text-[20px] text-center">{title}</h3>
+          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <h3 className="font-bold text-white text-[20px] text-center">
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
@@ -51,4 +56,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, 'about');
+export default SectionWrapper(About, "about");

@@ -7,6 +7,7 @@ import github from "./github.png";
 import links from "./link.png"
 import menu from "./menu.svg";
 import close from "./close.svg";
+import links_blk from "./link-blk.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -73,5 +74,6 @@ export {
   rnsit,
   sbu,
   java,
-  kubernetes
+  kubernetes,
+  links_blk
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { github, creator, links } from "../assets";
+import { github, creator, links, links_blk } from "../assets";
 import SectionWrapper from "../HOC/SectionWrapper";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -16,7 +16,8 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_link,
-  hasLink
+  hasLink,
+  isBlack
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -35,7 +36,7 @@ const ProjectCard = ({
               className={`${!hasLink ? `items-end`: ``} rounded-full w-8 h-8 flex cursor-pointer`}
               onClick={() => window.open(live_link, "blank")}
             >
-              <img src={links} alt="demo_link" className="object-contain" />
+              <img src={isBlack ? links_blk : links} alt="demo_link" className="object-contain" />
             </div>}
             <div
               className="rounded-full w-8 h-8 bg-black flex cursor-pointer"

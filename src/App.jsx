@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import ReactGA from "react-ga4";
 import {
   About,
   Contact,
@@ -7,13 +8,18 @@ import {
   Hero,
   Loader,
   Navbar,
-  PDFViewer,
   StarsCanvas,
   Tech,
   Works,
 } from "./components";
 import Education from "./components/Education";
+import { useEffect } from "react";
+import { handleAnalyticsPageView } from "./analytics/google-analytics";
 const App = () => {
+  useEffect(() => {
+    ReactGA.initialize("G-R1MLZDZ6PS");
+    handleAnalyticsPageView("pageview", "/", "Landing Page");
+  }, []);
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">

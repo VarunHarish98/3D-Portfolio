@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ReactGA from "react-ga4";
+
 import {
   filePath,
   firstName,
@@ -9,6 +11,7 @@ import {
 import { logo, close, menu } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { handleAnalyticsEvent } from "../analytics/google-analytics";
 
 const viewPDF = (filePath) => window.open(filePath);
 
@@ -28,6 +31,10 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
+          {ReactGA.event({
+            category: "",
+            action: "your action",
+          })}
           <img src={logo} alt="logo" className="w-24 h-24 object-contain" />
           <p className="text-white font-bold text-[18px] flex cursor-pointer ">
             {firstName} &nbsp;
@@ -43,14 +50,24 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px]`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                handleAnalyticsEvent(
+                  link.title,
+                  `${link.title}_click`,
+                  "Navbar"
+                );
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
           <button
             className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
-            onClick={() => viewPDF(filePath)}
+            onClick={() => {
+              viewPDF(filePath);
+              handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
+            }}
           >
             Resume
           </button>
