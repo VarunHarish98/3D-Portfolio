@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
+import { handleAnalyticsEvent } from "../analytics/google-analytics";
 
 const Hero = () => {
   return (
@@ -26,7 +27,16 @@ const Hero = () => {
       <ComputersCanvas />
       <div className="absolute flex justify-center bottom-[38px] items-center w-full">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start border-secondary p-2">
+          <div
+            className="w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start border-secondary p-2"
+            onClick={() =>
+              handleAnalyticsEvent(
+                "Floating Icon",
+                `floating_icon_click`,
+                "Hero"
+              )
+            }
+          >
             <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{

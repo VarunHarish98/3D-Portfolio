@@ -6,7 +6,7 @@ import { github, creator, links, links_blk } from "../assets";
 import SectionWrapper from "../HOC/SectionWrapper";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import { max } from "three/examples/jsm/nodes/Nodes.js";
+import { handleAnalyticsEvent } from "../analytics/google-analytics";
 
 const ProjectCard = ({
   index,
@@ -17,7 +17,7 @@ const ProjectCard = ({
   source_code_link,
   live_link,
   hasLink,
-  isBlack
+  isBlack,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -32,15 +32,29 @@ const ProjectCard = ({
             className="w-full h-full rounded-2xl object-cover"
           />
           <div className="absolute inset-0 flex flex-row justify-between m-3 gap-2">
-            {hasLink && <div
-              className={`${!hasLink ? `items-end`: ``} rounded-full w-8 h-8 flex cursor-pointer`}
-              onClick={() => window.open(live_link, "blank")}
-            >
-              <img src={isBlack ? links_blk : links} alt="demo_link" className="object-contain" />
-            </div>}
+            {hasLink && (
+              <div
+                className={`${
+                  !hasLink ? `items-end` : ``
+                } rounded-full w-8 h-8 flex cursor-pointer`}
+                onClick={() => {
+                  window.open(live_link, "blank");
+                  handleAnalyticsEvent(name, `${name}_link_click`, "Project");
+                }}
+              >
+                <img
+                  src={isBlack ? links_blk : links}
+                  alt="demo_link"
+                  className="object-contain"
+                />
+              </div>
+            )}
             <div
               className="rounded-full w-8 h-8 bg-black flex cursor-pointer"
-              onClick={() => window.open(source_code_link, "blank")}
+              onClick={() => {
+                window.open(source_code_link, "blank");
+                handleAnalyticsEvent(name, `${name}_github_click`, "Project");
+              }}
             >
               <img src={github} alt="github_link" className="object-contain" />
             </div>

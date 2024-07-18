@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import SectionWrapper from "../HOC/SectionWrapper";
 import { slideIn } from "../utils/motion";
+import { handleAnalyticsEvent } from "../analytics/google-analytics";
 
 //template_u4zdrgu
 //service_xi20plz
@@ -45,6 +46,7 @@ const Contact = () => {
           alert(
             "Thank you for your email, I will get back to you as soon as possible!"
           );
+          handleAnalyticsEvent("Contact Success", `contact_success`, "Contact");
           setForm({
             name: "",
             email: "",
@@ -55,6 +57,7 @@ const Contact = () => {
           setLoading(false);
           console.log(error);
           alert("Something went wrong!!!");
+          handleAnalyticsEvent("Contact Failure", `contact_failure`, "Contact");
         }
       );
   };

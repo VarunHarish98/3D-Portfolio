@@ -31,10 +31,6 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {ReactGA.event({
-            category: "",
-            action: "your action",
-          })}
           <img src={logo} alt="logo" className="w-24 h-24 object-contain" />
           <p className="text-white font-bold text-[18px] flex cursor-pointer ">
             {firstName} &nbsp;
