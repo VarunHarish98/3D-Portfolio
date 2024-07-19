@@ -32,6 +32,7 @@ import {
   github,
   linkedin,
   portfolio,
+  aws,
 } from "../assets";
 
 export const firstName = "Varun";
@@ -145,6 +146,10 @@ const technologies = [
   {
     name: "kubernetes",
     icon: kubernetes,
+  },
+  {
+    name: "aws",
+    icon: aws,
   },
 ];
 

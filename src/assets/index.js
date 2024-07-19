@@ -9,6 +9,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import links_blk from "./link-blk.png";
 import linkedin from "./linkedin.png";
+import aws from "./aws.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -80,5 +81,6 @@ export {
   kubernetes,
   links_blk,
   linkedin,
-  portfolio
+  portfolio,
+  aws,
 };
