@@ -87,7 +87,33 @@ const Navbar = () => {
             </div>
           </div>
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex flex-1 gap-2 justify-end items-center">
+          <button
+            className="bg-[#915eff] text-[10px] py-2 px-3 mt-1 rounded-xl"
+            onClick={() => {
+              openLink("drive");
+              handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
+            }}
+          >
+            Resume
+          </button>
+          {socialLinks.map((socialLink) => (
+            <div key={socialLink.id} className="w-8 h-8 mt-1">
+              <img
+                src={`${socialLink.title}`}
+                onClick={() => {
+                  openLink(socialLink.id);
+                  handleAnalyticsEvent(
+                    socialLink.id,
+                    `${socialLink.id}_url_click`,
+                    socialLink.id
+                  );
+                }}
+                alt="socialLink"
+                className="w-5 mt-1"
+              />
+            </div>
+          ))}
           <img
             src={!toggle ? menu : close}
             alt="menu"
@@ -100,7 +126,7 @@ const Navbar = () => {
             !toggle ? "hidden" : "flex"
           } absolute sm:hidden right-0 text-white mx-4 my-2 z-10 top-20 black-gradient px-8 rounded-xl p-4 text-[14px]`}
         >
-          <ul className="gap-4 flex flex-col  justify-end items-start">
+          <ul className="gap-4 flex flex-col justify-end items-start">
             {navLinks.map((link) => (
               <li
                 key={link.id}

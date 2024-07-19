@@ -12,17 +12,16 @@ const EducationCard = ({ edu, index }) => {
     <VerticalTimelineElement
       date={edu.date}
       contentStyle={{ background: "rgb(0, 0, 0)", color: "#fff" }}
-      contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-      iconStyle={{ background: "rgb(0, 0, 0)", color: "#fff" }}
+      contentArrowStyle={{ borderRight: "10px solid  rgb(33, 150, 243)" }}
+      iconStyle={{ background: `${edu.iconBg}`, color: "#000000" }}
       icon={
-        <div>
+        <div className="flex justify-center items-center md:mt-1">
           <img
             src={edu.icon}
-            className="flex justify-center w-[60px] h-[60px] items-center object-contain"
+            className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] object-contain  `}
           />
         </div>
       }
-      className="text-black"
     >
       <h1 className="text-2xl font-bold">{edu.title}</h1>
       <h3 className="text-xl font-semibold">{edu.school}</h3>

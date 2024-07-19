@@ -155,6 +155,7 @@ const education = [
     icon: sbu,
     date: "August 2023 - Present",
     cgpa: "3.8/4",
+    iconBg: "#000000",
     courses: [
       "Computer Vision",
       "Switching & Routing in parallel and distributed systems",
@@ -169,6 +170,7 @@ const education = [
     icon: rnsit,
     date: "August 2016 - July 2020",
     cgpa: "8.7/10",
+    iconBg: "#000000",
     courses: [
       "Network Analysis",
       "Programming in Java",
