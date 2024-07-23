@@ -70,7 +70,7 @@ export const socialLinks = [
 
 export const filePath = {
   drive:
-    "https://drive.google.com/file/d/1CHhChFL406M6IeugDdo9oh8my1oSwAZv/view?usp=sharing",
+    "https://drive.google.com/file/d/1kCMEbg5cIlQ5WPVTCsxBOK6X7rjXdUmG/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/varun-harish1998",
   github: "https://github.com/VarunHarish98",
 };
