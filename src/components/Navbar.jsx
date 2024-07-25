@@ -11,12 +11,45 @@ import { logo, close, menu } from "../assets";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { handleAnalyticsEvent } from "../analytics/google-analytics";
-
-const openLink = (path) => window.open(filePath[path]);
+import PDFViewer from "./PDFViewer";
+import Modal from "./Modal";
+// import Modals from "./Modal";
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+export const openLink = (path) => window.open(filePath[path]);
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
+  const [pdfView, setPdfView] = useState(true);
+
+  const handleResumeClick = () => {
+    openModal()
+    handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
+  };
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <nav
       className={`${styles.paddingX} w-full flex absolute items-center bg-primary top-0 z-20`}
@@ -58,15 +91,14 @@ const Navbar = () => {
             </li>
           ))}
           <div className="flex gap-4">
-            <button
-              className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
-              onClick={() => {
-                openLink("drive");
-                handleAnalyticsEvent("Resume", `Resume_click`, "Navbar");
-              }}
+            <Modal
+              isOpen={modalIsOpen}
+              onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
             >
-              Resume
-            </button>
+            </Modal>
             <div className="flex gap-2 -mt-1 cursor-pointer ">
               {socialLinks.map((socialLink) => (
                 <div key={socialLink.id} className="w-8 h-8">

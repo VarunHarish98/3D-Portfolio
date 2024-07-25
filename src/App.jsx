@@ -16,11 +16,19 @@ import Education from "./components/Education";
 import { useEffect } from "react";
 import { handleAnalyticsPageView } from "./analytics/google-analytics";
 import { Analytics } from "@vercel/analytics/react";
+import { pdfjs } from 'react-pdf';
+
+
 const App = () => {
   useEffect(() => {
     ReactGA.initialize("G-R1MLZDZ6PS");
     handleAnalyticsPageView("pageview", "/", "Landing Page");
   }, []);
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
