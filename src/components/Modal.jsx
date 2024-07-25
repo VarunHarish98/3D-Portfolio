@@ -37,7 +37,7 @@ const Modals = () => {
         className="bg-[#915eff] py-2 px-4 rounded-xl -mt-2"
         onClick={() => {
           openModal();
-          handleResumeClick();
+          // handleResumeClick();
         }}
       >
         Resume
