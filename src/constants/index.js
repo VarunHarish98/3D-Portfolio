@@ -75,6 +75,9 @@ export const filePath = {
   github: "https://github.com/VarunHarish98",
 };
 
+export const resumePath =
+  "https://uyugsntixuocxvrjcwan.supabase.co/storage/v1/object/public/Static%20Data%20-%20PII/Resume_Varun_HH.pdf?t=2024-08-10T22%3A24%3A25.170Z";
+
 const services = [
   {
     title: "Web Developer",

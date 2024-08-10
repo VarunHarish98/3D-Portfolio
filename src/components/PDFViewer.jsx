@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
 import { openLink } from "./Navbar";
+import { resumePath } from "../constants";
 
 const PDFViewer = () => {
   return (
     <div>
-      <Document file="src/assets/VarunHHResume.pdf">
+      <Document file={resumePath}>
         <Page
           pageNumber={1}
           renderTextLayer={false}
