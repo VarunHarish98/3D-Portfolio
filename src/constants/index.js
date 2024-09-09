@@ -190,7 +190,7 @@ const education = [
 
 const experiences = [
   {
-    title: "Assocaite Software Engineer",
+    title: "Associate Software Engineer",
     company_name: "Accenture",
     icon: accenture,
     iconBg: "#383E56",
