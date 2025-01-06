@@ -25,7 +25,7 @@ const Modals = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
-    setIsOpen(true);
+    window.open("https://drive.google.com/file/d/1TKROi008m0S8bGUgzT3qkFoN8Zvam5l7/view?usp=sharing")
   }
 
   function closeModal() {
