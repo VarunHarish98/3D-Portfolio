@@ -192,7 +192,7 @@ const experiences = [
   {
     title: "Research Assistant",
     company_name: "Stony Brook University",
-    icon: stony_brook,
+    icon: sbu,
     iconBg: "#E6DEDD",
     date: "January 2025 - Present",
     points: [
