@@ -190,31 +190,35 @@ const education = [
 
 const experiences = [
   {
-    title: "Associate Software Engineer",
-    company_name: "Accenture",
+    title: "Research Assistant",
+    company_name: "Stony Brook University",
+    icon: stony_brook,
+    iconBg: "#E6DEDD",
+    date: "January 2025 - Present",
+    points: [
+      "Designed a modular React-based LLM medical assistant using microfrontend architecture with independently deployed modules through ShadCN UI.",
+      "Built a RAG-based assistant with LangChain and Google Gemini API to extract and summarize multimodal medical content with 90%+ accuracy.",
+      "Deployed the application securely on AWS with JWT-based access control and responsive design for clinical workflows across devices."
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company_name: "Accenture (AT&T)",
     icon: accenture,
     iconBg: "#383E56",
     date: "December 2020 - August 2022",
     points: [
-      "Developing and maintaining web based chatbot application using React.js, NodeJs and other related technologies.",
-      "Integrating payment functionality inside chatbot application generating over $50,000 monthly.",
-      "Designing and developing REST-API using Node.js managing over 150,000 user daily.",
-      "Creating a log monitor dashboard using ELastic Logstash Kibana across 5 microservices.",
-      "Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.",
+      "Built and maintained AI chatbot interfaces in ReactJS and NodeJS serving 150K+ daily users across web and mobile.",
+      "Resolved cross-browser UI issues using React DevTools, HTML, and CSS debugging, improving visual consistency and user experience by 28%.",
+      "Scaled chatbot transactional MVP flows from prototype to production using modular React components, driving $180K ARR impact.",
+      "Led frontend delivery of CRM dashboards from Figma using Tailwind and Chart.js, improving KPI visibility and PM reporting by 40%.",
+      "Redesigned UI architecture using memoization and dynamic imports, reducing initial load by 30% for low-bandwidth devices.",
+      "Improved frontend delivery using Docker and Kubernetes with CI/CD pipelines, and implemented WCAG-compliant accessibility features boosting retention by 12%.",
+      "Drove TDD adoption with Jest/Mocha, achieving 90%+ test coverage and reducing production bugs by 40%."
     ],
-  },
-  {
-    title: "Software Intern",
-    company_name: "VI Solutions",
-    icon: vi_solutions,
-    iconBg: "#E6DEDD",
-    date: "June 2019 - July 2019",
-    points: [
-      "Designing and implementing LabVIEW application using ARM-based assembly language to function as antivirus",
-      "Engineering LabVIEW for hardware, increasing data acquisition efficiency enriching capabilities for NI-DAQ and NI-RIO devices.",
-    ],
-  },
+  }
 ];
+
 
 const testimonials = [
   {
