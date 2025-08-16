@@ -64,28 +64,28 @@ const Hero = () => {
   }, [taglines.length]);
 
   return (
-    <section className="relative min-h-screen w-full mx-auto overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-screen w-full mx-auto overflow-hidden">
       {/* Content rail */}
       <div
-        className={`${styles.paddingX} absolute inset-x-0 top-20 sm:top-24 md:top-28 mx-auto max-w-7xl`}
+        className={`${styles.paddingX} inset-x-0 top-16 sm:top-20 md:top-28 mx-auto max-w-7xl md:absolute`}
       >
-        <div className="flex flex-col-reverse gap-8 sm:gap-10 md:flex-row md:gap-12 lg:gap-16">
-          <div className="flex flex-row gap-4 sm:gap-5 md:min-w-[560px] lg:min-w-[620px]">
+        <div className="flex flex-col-reverse gap-6 sm:gap-8 md:flex-row md:gap-10 lg:gap-14">
+          <div className="flex flex-row gap-3 sm:gap-4 md:min-w-[520px] lg:min-w-[600px]">
             <div className="flex flex-col items-center">
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gray-300" />
-              <div className="w-[2px] h-28 sm:h-32 md:h-72 bg-gradient-to-b from-gray-400/70 to-transparent" />
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gray-300" />
+              <div className="w-[2px] h-24 sm:h-28 md:h-64 bg-gradient-to-b from-gray-400/70 to-transparent" />
             </div>
 
             {/* Headings + CTAs - Not component - ToDo */}
             <div>
               <h1
-                className={`${styles.heroHeadText} text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight`}
+                className={`${styles.heroHeadText} text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight`}
               >
                 Hi, I&apos;m <span className="text-white">Varun</span>
               </h1>
 
               {/* Rotating tagline */}
-              <div className="mt-3 sm:mt-4 min-h-[36px] sm:min-h-[42px] md:min-h-[48px]">
+              <div className="mt-2.5 sm:mt-3 min-h-[32px] sm:min-h-[38px] md:min-h-[44px]">
                 <AnimatePresence mode="wait">
                   <motion.p
                     key={tagIndex}
@@ -93,7 +93,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.35 }}
-                    className={`${styles.heroSubText} text-gray-300 text-base sm:text-lg md:text-xl`}
+                    className={`${styles.heroSubText} text-gray-300 text-[15px] sm:text-base md:text-lg`}
                   >
                     {taglines[tagIndex]}
                   </motion.p>
@@ -101,13 +101,13 @@ const Hero = () => {
               </div>
 
               {/* CTAs */}
-              <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+              <div className="mt-4 sm:mt-5 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
                 <a
                   href="#work"
                   onClick={() =>
                     handleAnalyticsEvent("CTA", "primary_view_work", "Hero")
                   }
-                  className="inline-flex items-center justify-center rounded-xl border border-white/70 bg-white px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base font-semibold text-black transition hover:brightness-90 focus:outline-none focus:ring-2 focus:ring-white/60"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/70 bg-white px-4 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-[15px] font-semibold text-black transition hover:brightness-90 focus:outline-none focus:ring-2 focus:ring-white/60"
                 >
                   See my work
                 </a>
@@ -119,13 +119,13 @@ const Hero = () => {
                   onClick={() =>
                     handleAnalyticsEvent("CTA", "resume_click", "Hero")
                   }
-                  className="inline-flex items-center justify-center rounded-xl border border-white/30 px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base font-semibold text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/30 px-4 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-[15px] font-semibold text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
                 >
                   View resume
                 </a>
 
                 {/* Social (monochrome) */}
-                <div className="ml-1 flex items-center gap-2 sm:gap-3">
+                <div className="ml-1 flex items-center gap-2 sm:gap-2.5">
                   {SOCIAL.map((s) => (
                     <button
                       key={s.id}
@@ -134,12 +134,12 @@ const Hero = () => {
                         window.open(s.href, "_blank");
                         handleAnalyticsEvent("Social", `${s.id}_click`, "Hero");
                       }}
-                      className="group inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
+                      className="group inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
                     >
                       <img
                         src={s.icon}
                         alt=""
-                        className="h-4 w-4 sm:h-5 sm:w-5"
+                        className="h-4 w-4 sm:h-4.5 sm:w-4.5"
                       />
                     </button>
                   ))}
@@ -147,7 +147,7 @@ const Hero = () => {
               </div>
 
               {/* Impact stats strip */}
-              <ul className="mt-5 sm:mt-6 flex flex-wrap gap-x-5 sm:gap-x-8 md:gap-x-10 gap-y-2.5 sm:gap-y-3 text-xs sm:text-sm md:text-base lg:text-lg text-gray-300">
+              <ul className="mt-4 sm:mt-5 flex flex-wrap gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-2 text-[12px] sm:text-[13px] md:text-sm text-gray-300">
                 {IMPACT.map(([k, v]) => (
                   <li key={k} className="flex items-baseline gap-2">
                     <span className="text-white font-semibold">{k}</span>
@@ -157,13 +157,13 @@ const Hero = () => {
               </ul>
 
               {/* Trust bar (grayscale logos) */}
-              <div className="mt-4 sm:mt-5 flex items-center gap-4 sm:gap-6 md:gap-8 opacity-80">
+              <div className="mt-4 flex items-center gap-4 sm:gap-5 md:gap-6 opacity-80">
                 {TRUST_LOGOS.map((l) => (
                   <img
                     key={l.alt}
                     src={l.src}
                     alt={l.alt}
-                    className="h-5 sm:h-6 md:h-7 lg:h-8 grayscale invert opacity-70"
+                    className="h-4 sm:h-5 md:h-6 grayscale invert opacity-70"
                     onClick={() =>
                       handleAnalyticsEvent(
                         "Trust",
@@ -189,22 +189,22 @@ const Hero = () => {
                     "Hero"
                   );
                 }}
-                className="group mt-5 sm:mt-6 inline-block align-top"
+                className="group mt-4 sm:mt-5 inline-block align-top"
               >
-                <div className="w-full max-w-full sm:max-w-[22rem] md:max-w-md lg:max-w-lg rounded-2xl border border-white/10 p-4 sm:p-5 lg:p-6 transition hover:bg-white/5">
+                <div className="w-full max-w-full sm:max-w-[21rem] md:max-w-md lg:max-w-lg rounded-2xl border border-white/10 p-4 sm:p-5 transition hover:bg-white/5">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-white font-semibold text-base sm:text-lg">
+                    <h3 className="text-white font-semibold text-[15px] sm:text-base">
                       GenAI Chatbot Platform
                     </h3>
-                    <span className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300">
+                    <span className="text-[11px] sm:text-xs text-gray-400 group-hover:text-gray-300">
                       Case study →
                     </span>
                   </div>
-                  <p className="mt-2 text-sm sm:text-base text-gray-300">
+                  <p className="mt-1.5 text-sm text-gray-300">
                     Scaled from MVP to 150K+ DAU; cut backend load by 80% via
                     WebSockets.
                   </p>
-                  <div className="mt-3 text-xs sm:text-sm text-gray-400">
+                  <div className="mt-2.5 text-[11px] sm:text-xs text-gray-400">
                     React · Node · WebSockets · Accessibility
                   </div>
                 </div>
@@ -223,22 +223,22 @@ const Hero = () => {
                     "Hero"
                   );
                 }}
-                className="group mt-5 sm:mt-6 inline-block md:ml-4 align-top"
+                className="group mt-4 sm:mt-5 inline-block md:ml-3 align-top"
               >
-                <div className="w-full max-w-full sm:max-w-[22rem] md:max-w-md lg:max-w-lg rounded-2xl border border-white/10 p-4 sm:p-5 lg:p-6 transition hover:bg-white/5">
+                <div className="w-full max-w-full sm:max-w-[21rem] md:max-w-md lg:max-w-lg rounded-2xl border border-white/10 p-4 sm:p-5 transition hover:bg-white/5">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-white font-semibold text-base sm:text-lg">
+                    <h3 className="text-white font-semibold text-[15px] sm:text-base">
                       Research Assistant — SBU
                     </h3>
-                    <span className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300">
+                    <span className="text-[11px] sm:text-xs text-gray-400 group-hover:text-gray-300">
                       Case study →
                     </span>
                   </div>
-                  <p className="mt-2 text-sm sm:text-base text-gray-300">
+                  <p className="mt-1.5 text-sm text-gray-300">
                     LLM-based clinical assistant using React microfrontends &
                     Node; secure JWT auth; responsive UI.
                   </p>
-                  <div className="mt-3 text-xs sm:text-sm text-gray-400">
+                  <div className="mt-2.5 text-[11px] sm:text-xs text-gray-400">
                     React · Node · Microfrontends · JWT
                   </div>
                 </div>
@@ -247,14 +247,14 @@ const Hero = () => {
           </div>
 
           {/* Right column: 3D canvas (optional via feature flag) */}
-          <div className="relative -mx-2 sm:-mx-4 mb-4 h-[220px] sm:h-[280px] md:h-[420px] lg:h-[560px] flex-1 md:mx-0 md:mb-0">
-            {render && <ComputersCanvas />}
+          <div className="relative -mx-2 sm:-mx-4 mb-4 h-[200px] sm:h-[240px] md:h-[380px] lg:h-[520px] flex-1 md:mx-0 md:mb-0">
+            {render}
           </div>
         </div>
       </div>
 
       {/* Scroll cue */}
-      <div className="absolute bottom-8 sm:bottom-10 left-0 right-0 flex w-full items-center justify-center">
+      <div className="absolute bottom-7 sm:bottom-9 left-0 right-0 flex w-full items-center justify-center">
         <a
           href="#about"
           aria-label="Scroll to about section"
@@ -262,7 +262,7 @@ const Hero = () => {
             handleAnalyticsEvent("Floating Icon", "floating_icon_click", "Hero")
           }
         >
-          <div className="flex h-14 w-8 sm:h-16 sm:w-9 items-start justify-center rounded-3xl border-2 border-gray-400/70 p-2">
+          <div className="flex h-12 w-8 sm:h-14 sm:w-9 items-start justify-center rounded-3xl border-2 border-gray-400/70 p-2">
             <motion.div
               animate={{ y: [0, 22, 0] }}
               transition={{
@@ -277,7 +277,7 @@ const Hero = () => {
       </div>
 
       {/* Subtle radial fade at edges (keeps focus on content) */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_75%_30%,rgba(255,255,255,0.06),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1100px_520px_at_75%_28%,rgba(255,255,255,0.05),transparent)]" />
 
       {/* Case Study Modal (you pasted this component already) */}
       <CaseStudyModal
@@ -291,6 +291,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// export default Hero;
 
 const CaseStudyModal = ({ open, onClose, title, repoUrl }) => {
   // close on ESC

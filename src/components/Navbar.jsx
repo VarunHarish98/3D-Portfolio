@@ -14,7 +14,8 @@ import { handleAnalyticsEvent } from "../analytics/google-analytics";
 // import VLogo from "../assets/v-logo.svg";
 
 // opener kept the same as your codebase uses filePath map
-export const openLink = (path) => window.open(filePath[path], "_blank", "noopener,noreferrer");
+export const openLink = (path) =>
+  window.open(filePath[path], "_blank", "noopener,noreferrer");
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -33,7 +34,7 @@ const Navbar = () => {
     <nav
       role="navigation"
       aria-label="Main"
-      className={`${styles.paddingX} fixed left-0 right-0 top-0 z-40`}
+      className={`${styles.paddingX} left-0 right-0 top-0 z-40`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between py-3">
         {/* Brand */}
@@ -51,7 +52,10 @@ const Navbar = () => {
             className="h-12 w-12 object-contain"
           />
           <p className="hidden cursor-pointer text-[16px] font-semibold text-white sm:block">
-            {firstName} <span className="text-gray-300">{middleName} {lastName}</span>
+            {firstName}{" "}
+            <span className="text-gray-300">
+              {middleName} {lastName}
+            </span>
           </p>
         </Link>
 
@@ -73,7 +77,9 @@ const Navbar = () => {
                     {/* active underline */}
                     <span
                       className={`absolute -bottom-1 left-0 h-[2px] w-full transition-opacity ${
-                        isActive ? "bg-white opacity-100" : "opacity-0 group-hover:opacity-60"
+                        isActive
+                          ? "bg-white opacity-100"
+                          : "opacity-0 group-hover:opacity-60"
                       }`}
                     />
                   </button>
@@ -160,13 +166,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile sheet */}
       <div
         className={`sm:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        } transition duration-200`}
+          open ? "block" : "hidden"
+        } fixed left-0 right-0 top-[64px] z-40`}
       >
-        <div className="mx-4 mt-2 rounded-2xl border border-white/10 bg-black/50 p-4 shadow-soft backdrop-blur">
+        <div className="mx-4 rounded-2xl border border-white/10 bg-black/70 p-4 shadow-soft">
           <ul className="flex flex-col gap-3 text-[15px]">
             {navLinks.map((link) => {
               const isActive = active === link.title;
