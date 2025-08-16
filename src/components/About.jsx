@@ -1,57 +1,53 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../HOC/SectionWrapper";
-// import ReactGA from "react-ga4";
-
-//Not being used, as cards are not required for now - TO-DO
-const ServiceCard = ({ title, icon, index }) => {
-  return (
-    <Tilt className="sm:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient rounded-[20px] shadow-card"
-      >
-        <div
-          options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary border-2 flex rounded-[20px] min-h-[280px] justify-evenly items-center flex-col py-5 px-24"
-        >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="font-bold text-white text-[20px] text-center">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
-  );
-};
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>About</p>
+        <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="text-secondary mt-4 max-w-3xl leading-[30px] text-[17px]"
-      >
-        I'm a Master's student in Computer Engineering at Stony Brook University
-        with over 2 years of work experience as a Software Engineer at Accenture
-        for AT&T. I'm skilled in Web Development with experience in Javascript
-        and TypeScript, and expertise in Node.js, React.js. Used various
-        technologies including MongoDB, Cassandra, Redis, Elastic Logstash
-        Kibana, Docker and Kubernetes.
-      </motion.p>
-      {/* <div className="flex flex-wrap gap-10 mt-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div> */}
+
+      <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-4 max-w-4xl">
+        <p className="text-secondary text-[18px] leading-[32px]">
+          I have completed my Master's in Computer Engineering at Stony Brook
+          University with nearly 3 years of work experience as a Software
+          Engineer at Accenture for AT&T and Research Assistant at Stont Brook
+          University. I'm skilled in Web Development with experience in
+          Javascript and TypeScript, and expertise in Node.js, React.js. Used
+          various technologies including MongoDB, Cassandra, Redis, Elastic
+          Logstash Kibana, Docker and Kubernetes.
+        </p>
+
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 className="mb-3 text-white text-[18px] font-semibold">
+            When I’m not coding
+          </h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex gap-3">
+              <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-gray-300" />
+              Following every Arsenal match (yes, I’m one of those fans 😅).
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-gray-300" />
+              Learning tennis — still more double faults than aces.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-gray-300" />
+              Long walks with a podcast and too many coffee stops.
+            </li>
+          </ul>
+        </div>
+
+        <p className="mt-6 text-secondary text-[16px] leading-[30px]">
+          That’s me in short. Always happy to chat about football, design
+          details, or the best tennis racquet for beginners.
+        </p>
+      </motion.div>
     </>
   );
 };

@@ -76,7 +76,7 @@ export const filePath = {
 };
 
 export const resumePath =
-  "https://uyugsntixuocxvrjcwan.supabase.co/storage/v1/object/public/Static%20Data%20-%20PII/Resume_Varun_HH.pdf?t=2024-08-10T22%3A24%3A25.170Z";
+  "https://drive.google.com/file/d/1jFVtWq87NFqBbOvXX6fxcSCS4lPLZkuv/view?usp=sharing";
 
 const services = [
   {
@@ -161,24 +161,26 @@ const education = [
     title: "Master's in Computer Engineering",
     school: "Stony Brook University",
     icon: sbu,
-    date: "August 2023 - Present",
+    date: "August 2023 - May 2025",
     cgpa: "3.8/4",
     iconBg: "#000000",
+    collegeLink: "https://www.stonybrook.edu",
     courses: [
+      "Data Structures and Algorithms",
+      "Practical ML and AI",
       "Computer Vision",
       "Switching & Routing in parallel and distributed systems",
       "Network Security",
-      "Practical ML and AI",
-      "Data Structures and Algorithms",
     ],
   },
   {
-    title: "Bachelor's in Electronics and Communication Engineering",
+    title: "Bachelor's in Electronics Communication Engineering",
     school: "RNS Institute of Technology",
     icon: rnsit,
     date: "August 2016 - July 2020",
     cgpa: "8.7/10",
-    iconBg: "#000000",
+    iconBg: "#ccc000",
+    collegeLink: "https://www.rnsit.ac.in",
     courses: [
       "Network Analysis",
       "Programming in Java",
@@ -194,11 +196,11 @@ const experiences = [
     company_name: "Stony Brook University",
     icon: sbu,
     iconBg: "#E6DEDD",
-    date: "January 2025 - Present",
+    date: "January 2025 - May 2025",
     points: [
       "Designed a modular React-based LLM medical assistant using microfrontend architecture with independently deployed modules through ShadCN UI.",
       "Built a RAG-based assistant with LangChain and Google Gemini API to extract and summarize multimodal medical content with 90%+ accuracy.",
-      "Deployed the application securely on AWS with JWT-based access control and responsive design for clinical workflows across devices."
+      "Deployed the application securely on AWS with JWT-based access control and responsive design for clinical workflows across devices.",
     ],
   },
   {
@@ -214,11 +216,10 @@ const experiences = [
       "Led frontend delivery of CRM dashboards from Figma using Tailwind and Chart.js, improving KPI visibility and PM reporting by 40%.",
       "Redesigned UI architecture using memoization and dynamic imports, reducing initial load by 30% for low-bandwidth devices.",
       "Improved frontend delivery using Docker and Kubernetes with CI/CD pipelines, and implemented WCAG-compliant accessibility features boosting retention by 12%.",
-      "Drove TDD adoption with Jest/Mocha, achieving 90%+ test coverage and reducing production bugs by 40%."
+      "Drove TDD adoption with Jest/Mocha, achieving 90%+ test coverage and reducing production bugs by 40%.",
     ],
-  }
+  },
 ];
-
 
 const testimonials = [
   {
